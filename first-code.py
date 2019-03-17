@@ -1,5 +1,7 @@
-print('Hello first World')
-nums = [1,2,3,4,5]
-for num in nums:
-    for letter in 'abc':
-        print(num,letter)
+def firstFun(*args, **kwargs):
+    print(args)
+    print(kwargs)
+
+courses = ['Maths', 'Art']
+info = {'name': 'John', 'age': 22}
+firstFun(*courses, **info)
