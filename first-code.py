@@ -1,9 +1,19 @@
-import csv
+from matplotlib import pyplot as plt 
+from matplotlib import style
 
-with open('sampleCsv.csv', 'r') as csv_file:
-    csv_reader = csv.reader(csv_file)
+x = [5,8,10]
+y = [12,16,6]
 
-    next(csv_reader)
+x2 = [6,9,11]
+y2 = [6,15,7]
 
-    for line in csv_reader:
-        print(line[4])
+plt.plot(x,y,'g',label = 'line one',linewidth = 5)
+plt.plot(x2,y2,'c',label = 'line one',linewidth = 5)
+
+plt.title('info')
+plt.ylabel('y axis')
+plt.xlabel('x axis')
+
+plt.legend()
+plt.grid(True,color = 'k')
+plt.show()
